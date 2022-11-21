@@ -1,6 +1,5 @@
 package ramos.monteiro.alex.application;
 
-import java.util.LinkedList;
 import java.util.List;
 
 import ramos.monteiro.alex.model.Album;
@@ -8,16 +7,26 @@ import ramos.monteiro.alex.model.Brinquedo;
 import ramos.monteiro.alex.model.Filmes;
 import ramos.monteiro.alex.model.Jogos;
 import ramos.monteiro.alex.model.Livro;
+import ramos.monteiro.alex.service.CaixaServiceImpl;
 import ramos.monteiro.alex.service.LojaServiceImpl;
 
 public class MainApplication {
 
-	@SuppressWarnings("unchecked")
+	@SuppressWarnings({ "static-access" })
 	public static void main(String[] args) {
 		
 		LojaServiceImpl lojaServiceImpl = new LojaServiceImpl();
+		CaixaServiceImpl caixaServiceImpl = new CaixaServiceImpl();
 		 
-		 
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+		//Caixa
+		
+		caixaServiceImpl.gerarCaixa(10000.0);
+		
+		System.out.println(caixaServiceImpl.getCaixa());
+		
+
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 		
@@ -44,12 +53,18 @@ public class MainApplication {
 		Filmes filme2 = new Filmes("Batman", "Warner", List.of("Jhon", "Nicole"), List.of("Ação", "aventura"), List.of("prod2"), 39.9, 2);
 		Filmes filme3 = new Filmes("Zumbilandia", "Sony", List.of("james", "Marcos"), List.of("comedia", "aventura"), List.of("prod3"), 45.9, 3);
 		
+		List<Filmes> filmes = lojaServiceImpl.adicionaFilmes(filme1,filme2,filme3);
+
+		
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		
 		//Brinquedos
 		Brinquedo brinquedo1 = new Brinquedo("MaxStell", "articulado", 99.9, 1);
 		Brinquedo brinquedo2 = new Brinquedo("Lego", "quebra-cabeça", 299.9, 2);
 		Brinquedo brinquedo3 = new Brinquedo("Funko", "colecionavel", 199.9, 3);
+		
+		List<Brinquedo> brinquedos = lojaServiceImpl.adicionaBrinquedos(brinquedo1,brinquedo2,brinquedo3);
+
 		
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -60,38 +75,21 @@ public class MainApplication {
 		Album album2 = new Album("Brasil de quem", "Sid", List.of("Trap", "Rap", "Hip-Hop"), "e2", 75.9, 2);
 		Album album3 = new Album("Penitencia", "LetoDie", List.of("Trap", "Rap"), "e3", 45.9, 3);
 		
+		List<Album> albuns = lojaServiceImpl.adicionaAlbuns(album1,album2,album3);
+
+		
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 		
+		//Testes
 		
-		
-//		lojaServiceImpl.listarCategoriaProduto(livros,"livro");
-		
-//		lojaServiceImpl.listarTodosProduto(jogos, livros);
+		lojaServiceImpl.quantidadeProduto(jogos);
 
+		caixaServiceImpl.venderProduto(jogos, jogo3);
+		System.out.println(caixaServiceImpl.getCaixa());
+		lojaServiceImpl.quantidadeProduto(jogos);
+		lojaServiceImpl.listarProduto(jogos);
 
-//		livros.addAll(lojaServiceImpl.adicionaLivros(livro1));
-//				
-//		lojaServiceImpl.listarProduto(livros);
-//		
-//		lojaServiceImpl.quantidadeProduto(livros);
-//		
-//		
-//		lojaServiceImpl.removeProduto(livros, livro1);
-//		
-//		lojaServiceImpl.listarProduto(livros);
-//		
-//		lojaServiceImpl.quantidadeProduto(livros);
-		
-		
-		
-		
-
-
-		
-		
-		
-		
 		
 	}
 
