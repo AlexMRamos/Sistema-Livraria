@@ -26,7 +26,7 @@ public class Jogos extends Produto {
 	public void setEstudio(String estudio) {
 		this.estudio = estudio;
 	}
-	public Jogos(String nome, String distribuidora, String genero, String estudio, Double preco, int id) {
+	public Jogos(String nome, String distribuidora, String genero, String estudio, Double preco, int id, Boolean indicador) {
 		this.setNome(nome);
 		this.distribuidora = distribuidora;
 		this.genero = genero;
@@ -34,6 +34,7 @@ public class Jogos extends Produto {
 		this.setPreco(preco);
 		this.setId(id);
 		this.setCategoria("Jogos");
+		this.setIndicador(indicador);
 	}
 	
 	@Override

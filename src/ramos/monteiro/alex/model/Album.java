@@ -27,7 +27,7 @@ public class Album extends Produto {
 	public void setSelos(String selos) {
 		this.selos = selos;
 	}
-	public Album(String nome, String artista, List<String> generos, String selos, Double preco, int id) {
+	public Album(String nome, String artista, List<String> generos, String selos, Double preco, int id, Boolean indicador) {
 		this.setNome(nome);
 		this.artista = artista;
 		this.generos = generos;
@@ -35,6 +35,7 @@ public class Album extends Produto {
 		this.setId(id);
 		this.setCategoria("Album");
 		this.setPreco(preco);
+		this.setIndicador(indicador);
 	}
 	@Override
 	public String toString() {

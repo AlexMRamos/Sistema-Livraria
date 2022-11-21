@@ -33,7 +33,7 @@ public class Filmes extends Produto {
 	public void setProdutores(List<String> produtores) {
 		this.produtores = produtores;
 	}
-	public Filmes(String nome, String estudio, List<String> diretores, List<String> generos, List<String> produtores, Double preco, int id) {
+	public Filmes(String nome, String estudio, List<String> diretores, List<String> generos, List<String> produtores, Double preco, int id, Boolean indicador) {
 		this.setNome(nome);
 		this.estudio = estudio;
 		this.diretores = diretores;
@@ -42,6 +42,7 @@ public class Filmes extends Produto {
 		this.setPreco(preco);
 		this.setId(id);
 		this.setCategoria("Filme");
+		this.setIndicador(indicador);
 	}
 	
 	@Override

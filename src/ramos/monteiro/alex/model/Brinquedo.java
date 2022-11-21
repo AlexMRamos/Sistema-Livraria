@@ -12,12 +12,13 @@ public class Brinquedo extends Produto {
 		this.tipo = tipo;
 	}
 
-	public Brinquedo(String nome, String tipo, Double preco, int id) {
+	public Brinquedo(String nome, String tipo, Double preco, int id, Boolean indicador) {
 		this.setNome(nome);
 		this.tipo = tipo;
 		this.setPreco(preco);
 		this.setCategoria("Brinquedo");
 		this.setId(id);
+		this.setIndicador(indicador);
 	}
 
 	@Override

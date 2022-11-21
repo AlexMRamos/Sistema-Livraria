@@ -35,7 +35,7 @@ public class Livro extends Produto {
 				+ getId() + "]";
 	}
 	
-	public Livro(String nome,String editora, List<String> generos, String escritor, Double preco, int id) {
+	public Livro(String nome,String editora, List<String> generos, String escritor, Double preco, int id, Boolean indicador) {
 
 		this.editora = editora;
 		this.generos = generos;
@@ -44,6 +44,7 @@ public class Livro extends Produto {
 		this.setId(id);
 		this.setPreco(preco);
 		this.setCategoria("Livro");
+		this.setIndicador(indicador);
 	}
 	public Livro() {
 	}

@@ -9,7 +9,6 @@ import ramos.monteiro.alex.model.Brinquedo;
 import ramos.monteiro.alex.model.Filmes;
 import ramos.monteiro.alex.model.Jogos;
 import ramos.monteiro.alex.model.Livro;
-import ramos.monteiro.alex.model.Loja;
 import ramos.monteiro.alex.model.Produto;
 
 public class LojaServiceImpl implements LojaService {
@@ -75,7 +74,11 @@ public class LojaServiceImpl implements LojaService {
 
 	@Override
 	public void removeProduto(List<? extends Produto> produtos, Produto produto) {	
-		produtos.remove(produto);	
+		if(produtos.stream().anyMatch(prod -> prod.equals(produto))) {
+			produtos.remove(produto);				
+		}else {
+			System.out.println("Produto: " + produto.getNome() + " Não está disponivel");
+		}
 	}
 
 	@SuppressWarnings("unchecked")
