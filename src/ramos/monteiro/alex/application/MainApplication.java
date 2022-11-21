@@ -40,24 +40,6 @@ public class MainApplication {
 		Album album2 = new Album("Brasil de quem", "Sid", List.of("Trap", "Rap", "Hip-Hop"), "e2", 75.9, 2);
 		Album album3 = new Album("Penitencia", "LetoDie", List.of("Trap", "Rap"), "e3", 45.9, 3);
 		
-		//Lista de Objetos
-		List<Livro> livros = new LinkedList<>();
-		List<Album> albuns = new LinkedList<>();
-		List<Brinquedo> brinquedos = new LinkedList<>();
-		List<Filmes> filmes = new LinkedList<>();
-		List<Jogos> jogos = new LinkedList<>();
-		
-		livros.add(livro1);
-		livros.add(livro2);
-		livros.add(livro3);
-		
-		albuns.add(album1);
-		albuns.add(album2);
-		albuns.add(album3);
-		
-		brinquedos.add(brinquedo1);
-		brinquedos.add(brinquedo2);
-		brinquedos.add(brinquedo3);
 		
 		
 		
