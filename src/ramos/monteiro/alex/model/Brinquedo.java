@@ -19,6 +19,12 @@ public class Brinquedo extends Produto {
 		this.setCategoria("Brinquedo");
 		this.setId(id);
 	}
+
+	@Override
+	public String toString() {
+		return "Brinquedo [tipo=" + tipo + ", Nome()=" + getNome() + ", Preco()=" + getPreco()
+				+ ", Categoria()=" + getCategoria() + ", Id()=" + getId() + "]";
+	}
 	
 	
 

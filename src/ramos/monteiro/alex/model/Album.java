@@ -36,6 +36,13 @@ public class Album extends Produto {
 		this.setCategoria("Album");
 		this.setPreco(preco);
 	}
+	@Override
+	public String toString() {
+		return "Album [artista=" + artista + ", generos=" + generos + ", selos=" + selos + ", Nome()=" + getNome()
+				+ ", Preco()=" + getPreco() + ", Categoria()=" + getCategoria() + ", Id()=" + getId() + "]";
+	}
+	
+	
 	
 	
 	

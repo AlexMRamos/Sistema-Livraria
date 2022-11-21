@@ -44,6 +44,15 @@ public class Filmes extends Produto {
 		this.setCategoria("Filme");
 	}
 	
+	@Override
+	public String toString() {
+		return "Filmes [estudio=" + estudio + ", diretores=" + diretores + ", generos=" + generos + ", produtores="
+				+ produtores + ", Nome()=" + getNome() + ", Preco()=" + getPreco() + ", Categoria()="
+				+ getCategoria() + ", Id()=" + getId() + "]";
+	}
+	
+	
+	
 	
 	
 	

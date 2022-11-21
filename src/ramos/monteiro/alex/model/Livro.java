@@ -28,6 +28,13 @@ public class Livro extends Produto {
 		this.escritor = escritor;
 	}
 	
+	@Override
+	public String toString() {
+		return "Livro [editora=" + editora + ", generos=" + generos + ", escritor=" + escritor + ", Nome()="
+				+ getNome() + ", Preco()=" + getPreco() + ", Categoria()=" + getCategoria() + ", Id()="
+				+ getId() + "]";
+	}
+	
 	public Livro(String nome,String editora, List<String> generos, String escritor, Double preco, int id) {
 
 		this.editora = editora;

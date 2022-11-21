@@ -2,6 +2,7 @@ package ramos.monteiro.alex.model;
 
 public class Jogos extends Produto {
 	
+
 	private String distribuidora;
 	private String genero;
 	private String estudio;
@@ -33,6 +34,13 @@ public class Jogos extends Produto {
 		this.setPreco(preco);
 		this.setId(id);
 		this.setCategoria("Jogos");
+	}
+	
+	@Override
+	public String toString() {
+		return "Jogos [distribuidora=" + distribuidora + ", genero=" + genero + ", estudio=" + estudio + ", Nome()="
+				+ getNome() + ", Preco()=" + getPreco() + ", Categoria()=" + getCategoria() + ", Id()="
+				+ getId() + "]";
 	}
 	
 
