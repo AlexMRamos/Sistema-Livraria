@@ -2,6 +2,7 @@ package ramos.monteiro.alex.service;
 
 import java.util.LinkedList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import ramos.monteiro.alex.model.Album;
 import ramos.monteiro.alex.model.Brinquedo;
@@ -83,6 +84,15 @@ public class LojaServiceImpl implements LojaService {
 		for (int i = 0; i < produtos.length; i++)  {
 			this.listarProduto(produtos[i]);
 		  }	
+		
+	}
+
+	@Override
+	public void listarCategoriaProduto(List< ? extends Produto> produtos, String categoria) {
+		
+		List<Produto>prod = produtos.stream().filter(produto -> produto.getCategoria().equalsIgnoreCase(categoria)).collect(Collectors.toList());
+		this.listarProduto(prod);
+		
 		
 	}
 

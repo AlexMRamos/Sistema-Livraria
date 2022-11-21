@@ -17,12 +17,10 @@ public interface LojaService {
 	List<Brinquedo> adicionaBrinquedos(Brinquedo... brinquedos);
 	List<Album> adicionaAlbuns(Album... albuns);
 	
-	void listarProduto(List<? extends Produto> produtos);
-	
 	@SuppressWarnings("unchecked")
 	void listarTodosProduto(List<? extends Produto>... produtos);
-	
-//	void listarCategoriaProduto(List<Produto> produtos, String categoria);
+	void listarProduto(List<? extends Produto> produtos);
+	void listarCategoriaProduto(List<? extends Produto> produtos, String categoria);
 	
 	void quantidadeProduto(List<? extends Produto> produtos);
 	
